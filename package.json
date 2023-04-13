@@ -1,0 +1,49 @@
+{
+  "name": "@epeejs/postmessage",
+  "description": "提供浏览器任意两个页面通信能力",
+  "version": "0.5.0",
+  "scripts": {
+    "compile": "tsc",
+    "release": "npm run compile && npm publish",
+    "prepare": "husky install"
+  },
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epeejs/postmessage"
+  },
+  "license": "MIT",
+  "files": [
+    "es",
+    "README.md"
+  ],
+  "keywords": [
+    "postmessage",
+    "sdk",
+    "web"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/md5": "^2.3.1",
+    "@umijs/fabric": "^2.14.1",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.4.0",
+    "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{json,ts,tsx,js,jsx,md,scss,less,css,html}": "prettier --write"
+  },
+  "dependencies": {
+    "md5": "^2.3.0",
+    "tiny-emitter": "^2.1.0"
+  }
+}
